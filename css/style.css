@@ -1,0 +1,133 @@
+:root{
+    --w100:100%;
+    --pad:15px;
+    --bl:#fff;
+}
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    font-family:roboto;
+}
+/*Imagen de fondo*/
+body{
+    background-size: cover;
+    background-attachment: fixed;
+}
+img{
+    vertical-align:middle;
+    width:var(--w100);
+}
+/* Load */
+.contentLoad{
+    --WH:100%;
+ background:#fff;
+ width:var(--WH);
+ height:var(--WH);
+ position:absolute;
+ top:0;
+ left:0;
+ z-index:500;
+ display:flex;
+ justify-content:center;
+ align-items:center;
+ flex-wrap: wrap;
+ transform:opacity 1s ease;
+ opacity:1;
+ visibility: visible;
+}
+
+.centro{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap: wrap;
+}
+.centro p{
+    padding:10px;
+    width:var(--w1);
+    display:block;
+    text-align:center;
+    color:#666;
+    width:100%;
+}
+
+.load{
+    --WH:100px;
+    --pxTB:10px;
+    width:var(--WH);
+    height:var(--WH);
+    border-radius:50%;
+    border:var(--pxTB) solid #ddd;
+    border-top:var(--pxTB) solid #2583c5;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin{
+    0%{
+        transform:rotate(0deg);
+    }
+    100%{
+        transform:rotate(360deg);
+    }
+}
+
+@media screen and (max-width:460px){
+    #ul{
+        width:100%;
+    }
+}
+/* Alert conexión */
+.alert{
+    width:var(--w100);
+    padding:10px;
+    position:absolute;
+    top:-100%;
+    left:0;
+    background:#343434;
+    text-align: center;
+    transition:all 0.3s ease;
+}
+/*Contenedor*/
+section{ 
+    position: absolute;
+    top:0;
+    left:0;
+    width:var(--w100);
+    height:var(--w100);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap: wrap;
+}
+
+.content{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap: wrap;
+}
+/*Fecha y contenedor*/
+.fecha,.contentHora{
+    width:var(--w100);
+    padding:10px;
+    background:rgba(0,0,0,0.5);
+    color:var(--bl);
+    text-align:center;
+    font-size:45px;
+}
+.contentHora{
+    font-size:30px;
+    width:var(--w100);
+    margin-top:10px;
+    font-weight:10;
+}
+
+/* Hora y segundos*/
+.hora,.seg{
+    width:var(--w100);
+    text-align:center;
+}
+.hora{
+    font-size:35px;
+}
