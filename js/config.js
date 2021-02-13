@@ -34,23 +34,28 @@ let procesar = () => {
         amPm="P.M.";
         $body.style.background=`url(${tres})no-repeat`;
         $body.style.backgroundSize=`cover`;
+        $body.style.backgroundAttachment=`fixed`;
         if (hora > 5) {
             $body.style.background=`url(${cuatro})no-repeat`;
             $body.style.backgroundSize=`cover`;
+            $body.style.backgroundAttachment=`fixed`;
         }
         if (hora > 6) {
             $body.style.background=`url(${cinco})no-repeat`;
             $body.style.backgroundSize=`cover`;
+            $body.style.backgroundAttachment=`fixed`;
             dn = "Buenas noches";
         }
     } else {
         $body.style.background=`url(${uno})no-repeat`;
         $body.style.backgroundSize=`cover`;
+        $body.style.backgroundAttachment=`fixed`;
         amPm="A.M.";
         dn = "Buenos días";
         if (hora > 8) {
             $body.style.background=`url(${dos})no-repeat`;
             $body.style.backgroundSize=`cover`;
+            $body.style.backgroundAttachment=`fixed`;
         }
     }
     if (hora == 0) {
