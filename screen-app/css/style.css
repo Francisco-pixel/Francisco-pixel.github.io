@@ -11,7 +11,8 @@
 }
 /*Imagen de fondo*/
 body{
-    background:#fff;
+    background-size: cover;
+    background-attachment: fixed;
 }
 img{
     vertical-align:middle;
@@ -105,28 +106,4 @@ section{
     justify-content:center;
     align-items:center;
     flex-wrap: wrap;
-}
-/*Fecha y contenedor*/
-.fecha,.contentHora{
-    width:var(--w100);
-    padding:10px;
-    background:rgba(0,0,0,0.5);
-    color:var(--bl);
-    text-align:center;
-    font-size:45px;
-}
-.contentHora{
-    font-size:30px;
-    width:var(--w100);
-    margin-top:10px;
-    font-weight:10;
-}
-
-/* Hora y segundos*/
-.hora,.seg{
-    width:var(--w100);
-    text-align:center;
-}
-.hora{
-    font-size:35px;
 }

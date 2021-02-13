@@ -33,6 +33,7 @@ let procesar = () => {
         dn = "Buenas tardes";
         amPm="P.M.";
         $body.style.background=`url(${tres})no-repeat`;
+        $body.style.backgroundSize=`cover`;
         if (hora > 5) {
             $body.style.background=`url(${cuatro})no-repeat`;
             $body.style.backgroundSize=`cover`;
