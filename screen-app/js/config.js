@@ -31,29 +31,17 @@ w.addEventListener("offline", () => {
 });
 setInterval(() => {
     let user = n.userAgent,
-        device,
-        marca,
-        tf=false,
-        $ul = d.querySelector(".ul");
-    if (user.match(/windows|apple|iphone|ipad|android/i)) {
-        device = user.match(/windows|apple|iphone|ipad|android/i)[0];
-    } else {
-        device = "N/D";
-    }
-
-    if (user.match(/samsumg|huawei|redmi|honor|sony|lg|nokia|motorola|galaxy|mac/i)) {
-        marca = user.match(/samsumg|huawei|redmi|honor|sony|lg|nokia|motorola|galaxy|mac/i)[0];
-        c.log(marca);
-    } else {
-        marca = "N/D";
-    }
-    let width = w.screen.availWidth,
-        height = w.screen.availHeight;
-    data.forEach((item)=>{       
-        if(item.width.includes(width)){
-            tf=true;
+        tf = false,
+        $ul = d.querySelector(".ul"),
+        width = w.screen.availWidth,
+        height = w.screen.availHeight,
+        device = user.match(/windows|apple|iphone|ipad|android/i),
+        marca = user.match(/samsumg|huawei|redmi|honor|sony|lg|nokia|motorola|galaxy|mac|xiaomi/i);
+    data.forEach((item) => {
+        if (item.width.includes(width)) {
+            tf = true;
             $ul.innerHTML = `
-            <li><i class="fas fa-sitemap"></i>${device} ${marca}</li>
+            <li><i class="fas fa-sitemap"></i>${device} ${marca || ""}</li>
             <li><i class="fas fa-spell-check"></i>${item.siglas}</li>
             <li><i class="fas fa-file-signature"></i>${item.nombre}</li>
             <li><i class="fas fa-desktop"></i>${width} x ${height}px</li>
@@ -61,9 +49,9 @@ setInterval(() => {
            `;
         }
     });
-    if(tf==false){
+    if (tf == false) {
         $ul.innerHTML = `
-            <li><i class="fas fa-sitemap"></i>${device}</li>
+            <li><i class="fas fa-sitemap"></i>${device} ${marca || ""}</li>
             <li><i class="fas fa-desktop"></i>${width} x ${height}px</li>
            `;
     }

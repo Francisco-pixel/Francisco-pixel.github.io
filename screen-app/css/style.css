@@ -13,7 +13,8 @@
 body{
     background-size: cover;
     background-attachment: fixed;
-    background:#f1f1f1;
+    background: #f9fafb;
+    max-width:900px;
 }
 img{
     vertical-align:middle;
@@ -143,9 +144,6 @@ section{
 }
 
 @media screen and (max-width:640px){
-    body{
-        background:#fff;
-    }
     .content{
         width:var(--w100);
     }
