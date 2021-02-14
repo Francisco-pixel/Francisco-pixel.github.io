@@ -36,7 +36,7 @@ setInterval(() => {
         width = w.screen.availWidth,
         height = w.screen.availHeight,
         device = user.match(/windows|apple|iphone|ipad|android/i),
-        marca = user.match(/samsumg|huawei|redmi|honor|sony|lg|nokia|motorola|galaxy|mac|xiaomi/i);
+        marca = user.match(/samsung|galaxy|oneplus|pixel|huawei|redmi|honor|sony|lg|nokia|motorola|mac|xiaomi|blu|htc|alcatel|zte|/i);
     data.forEach((item) => {
         if (item.width.includes(width)) {
             tf = true;
